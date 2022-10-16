@@ -5,7 +5,9 @@ function Generate(props){
     return (
     <div class="rightpanel">
         My CV:
-        {props.name}
+        Name: {props.firstname} {props.lastname}
+        Title: {props.title}
+        Address: {props.address}
     </div>
     )
 }

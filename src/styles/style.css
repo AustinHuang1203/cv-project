@@ -8,11 +8,13 @@
 .rightpanel{
     display:flex;
     width:50%;
+    flex-wrap:wrap;
     background-color:lightblue;
 }
 
 .leftpanel{
     display:flex;
+    flex-wrap:wrap;
     width:50%;
     background-color:lightgreen;
 }

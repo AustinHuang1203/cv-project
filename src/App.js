@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import './styles/style.css';
+import Fillin from './components/Fillin.js';
+import Generate from './components/Generate.js';
 
 function App() {
+  const [name, setName] = useState();
+
+  function update1(){
+    setName(document.getElementById("name1").value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="body1">
+      <div class="leftpanel">
+        <input type ="text" id ="name1"></input>
+        <button type="button" onClick={update1}>Submit</button>
+      </div>
+      <Generate name={name} />
     </div>
   );
 }
